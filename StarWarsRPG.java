@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class StarWarsRPG {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        Jedi jedi = new Jedi("Luke Skywalker", 100);
-        Sith sith = new Sith("Darth Vader", 120);
+        Jedi jedi = new Jedi("Shaon Skywalker", 100);
+        Sith sith = new Sith("Rana Vader", 120);
 
         System.out.println("Welcome to the Star Wars RPG!");
         System.out.println("Choose your character: (1) Jedi or (2) Sith");
-        int choice = scanner.nextInt();
+        int choice = sc.nextInt();
 
         if (choice == 1) {
             jedi.activateLightSaber();
@@ -21,7 +21,7 @@ public class StarWarsRPG {
 
         while (jedi.getHealth() > 0 && sith.getHealth() > 0) {
             System.out.println("Choose your action: (1) Attack or (2) Defend");
-            int action = scanner.nextInt();
+            int action = sc.nextInt();
 
             if (action == 1) {
                 jedi.attack();
@@ -42,6 +42,6 @@ public class StarWarsRPG {
             System.out.println("Luke Skywalker wins!");
         }
 
-        scanner.close();
+        sc.close();
     }
 }

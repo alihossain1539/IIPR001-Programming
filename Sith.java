@@ -27,6 +27,7 @@ public class Sith {
     public void takeDamage(int damage) {
         health -= damage;
         System.out.println(name + " takes " + damage + " damage.");
+        System.out.println(name + " health remain " + health + ".");
     }
     
     public int getHealth() {
